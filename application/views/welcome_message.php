@@ -82,7 +82,7 @@
 									 	<h2>21%</h2>
 									 </div>
 	                      		</div>
-	                      	</div><! --/grey-panel -->
+	                      	</div><!--/grey-panel -->
                       	</div><!-- /col-md-4-->
                       	
 
@@ -114,8 +114,8 @@
 										<h5>60% Used</h5>
 									</div>
 								</footer>
-                      		</div><! -- /darkblue panel -->
-                      	</div><!-- /col-md-4 -->
+                      		</div><!-- /darkblue panel -->
+                      	</div><!-- /ol-md-4 -->
                       	
 						<div class="col-md-4 col-sm-4 mb">
 							<!-- REVENUE PANEL -->
@@ -222,7 +222,7 @@
 								<h6>TOTAL SALES: 1388</h6>
 								<button class="btn btn-small btn-theme04">FULL REPORT</button>
 							</div>
-						</div><! --/col-md-4 -->
+						</div><!--/col-md-4 -->
 						
 						<! -- PROFILE 02 PANEL -->
 						<div class="col-lg-4 col-md-4 col-sm-4 mb">
@@ -238,7 +238,7 @@
 									<a href="#"><i class="fa fa-facebook"></i></a>
 									<a href="#"><i class="fa fa-dribbble"></i></a>
 								</div>
-							</div><! --/panel -->
+							</div><!--/panel -->
 						</div><!--/ col-md-4 -->
 						
                       	<div class="col-md-4 col-sm-4 mb">
@@ -262,7 +262,7 @@
 								</script>
 								<h3>60% USED</h3>
 					  		</div>
-					  	</div><! --/col-md-4 -->
+					  	</div><!--/col-md-4 -->
 					</div><!-- /row -->	
 					
                   </div><!-- /col-lg-9 END SECTION MIDDLE -->
@@ -415,7 +415,7 @@
                         </div><!-- / calendar -->
                       
                   </div><!-- /col-lg-3 -->
-              </div><! --/row -->
+              </div><!--/row -->
           </section>
       </section>
 

@@ -2,26 +2,70 @@
 
 class Welcome extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -  
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in 
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see http://codeigniter.com/user_guide/general/urls.html
-	 */
-	public function index()
-	{
-		$this->load->view('welcome_message');
-	}
-}
+     
+    public function __construct() {
+        parent::__construct();
+       
+    }
 
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
+	public function index($data = null)
+	{
+        if ($this->session->userdata('logged_in')) {
+            redirect('welcome', 'refresh');
+        }else {
+            if (!isset($data)) {
+                $data['view']       = 'welcome_message';
+                $data['css']        = array('zabuto_calendar');
+                $data['js']         = array('inicio','sparkline-chart','zabuto_calendar');
+                $data['library']       = '';
+                $data['showHead']   = false;
+            }
+            else{
+              $data['view']       = 'welcome_message';
+                $data['css']        = array('zabuto_calendar');
+                $data['js']         = array('inicio','sparkline-chart','zabuto_calendar');
+                $data['library']       = '';
+                $data['showHead']   = false;
+            	$data['data_view']		=$data;
+            }
+            $this->load->view('template',$data);
+        }
+	}
+    
+  /*  public function acceder() {
+    	
+        $u = new Usuario();
+        $u->email = $this->input->post('username');
+        $u->contrasenia = $this->input->post('password');
+
+        if ($u->login())
+        {
+          
+            $newdata = array(
+            		'id'		=>$u->id,
+            		'nombre'	=> $u->nombre,
+            		'apellido'	=> $u->apellido,
+            		'idUsuario'	=> $u->idUsuario,
+            		'urlFoto' => $u->urlFoto,
+            		'logged_in'	=> TRUE
+            );
+       
+            $this->session->set_userdata($newdata);
+            redirect('novedades', 'refresh');
+        }
+        else
+        {
+           
+            $data['mensajeError'] = $u->error->login;
+         $this->index($data);   
+        }
+    }
+    
+    public function salir() {
+    	 
+    	$this->session->sess_destroy();
+    	$this->index();
+    	
+    }*/
+    
+}
