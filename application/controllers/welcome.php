@@ -10,8 +10,8 @@ class Welcome extends CI_Controller {
 
 	public function index($data = null)
 	{
-        if ($this->session->userdata('logged_in')) {
-            redirect('welcome', 'refresh');
+        if (!$this->session->userdata('logged_in')) {
+            redirect('login', 'refresh');
         }else {
             if (!isset($data)) {
                 $data['view']       = 'welcome_message';

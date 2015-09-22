@@ -51,4 +51,82 @@ class Personal extends CI_Controller{
 		return $u;
 	
 	}
+	
+	public function altaUsuario(){
+	
+		try{
+			$u = new Usuario();
+	
+			// Definir campo en post. Formato AAAA-MM-DD fechas
+			$u->rol_id =  $this->input->post('tipoUsuarioAltaUsuario');
+			$u->nombre =  $this->input->post('nombreAltaUsuario');
+			$u->apellido=  $this->input->post('apellidoAltaUsuario');
+			$u->dni =  $this->input->post('dniAltaUsuario');
+			$u->legajo =  $this->input->post('legajoAltaUsuario');
+				
+			$u->fechaIngreso = $this->input->post('fechaIngresoAltaUsuario');
+			$u->fechaEgreso = '';//dejar en null.
+			$u->telefono = $this->input->post('telefonoAltaUsuario');
+			$u->categoria = $this->input->post('categoriaAltaUsuario'); 
+			$u->estado =  'alta';
+			$u->email =  $this->input->post('emailAltaUsuario');
+			$u->contrasenia = $this->input->post('contraseniaAltaUsuario');
+			$u->confirmarContrasenia = $this->input->post('confirmarContraseniaAltaUsuario');
+			//CAMBIAR CONTRASEÑA
+		/*	$u->rol_id =  '1';
+			$u->nombre = 'Pablo';
+			$u->apellido= 'Rosales';
+			$u->dni =  '36321654';
+			$u->legajo =  '1504';
+			
+			$u->fechaIngreso = '2015/04/27';
+			$u->fechaEgreso = '';//dejar en null.
+			$u->telefono = '297063245';
+			$u->categoria = '2';
+			$u->estado =  'alta';
+			$u->email ='pablo27207@gmail.com';
+			$u->contrasenia = 'laboratorioa';
+			$u->confirmarContrasenia = 'laboratorioa';*/
+	
+			$url = "C:\wamp\www\controlAdelanto";
+	
+			$config['upload_path'] = $url.'\assets\img\profiles';
+			$config['allowed_types'] = 'gif|jpg|png|jpeg';
+			$config['max_size']	= '10000';
+	
+			$this->load->library('upload', $config);
+	
+			if (!$this->upload->do_upload('FotoAltaUsuario'))
+			{
+				$errores = $this->upload->display_errors();
+					
+				$u->urlFoto ='no_avatar.gif';
+			}
+			else
+			{
+				$this->data_page['datosSubida']= array('upload_data' => $this->upload->data());
+				$datos = $this->upload->data('full_path');
+				$u->urlFoto = $datos['file_name'];
+					
+			}
+	
+	
+			if ($u->save())
+			{
+				echo json_encode(array('title' => 'Resultado: ', 'text' => 'Se carg&oacute; exitosamente el nuevo usuario.', 'status' => 'success'));
+	
+			}
+			else
+			{
+				echo json_encode(array('title' => 'Error: ', 'text' => $u->error->string, 'status' => 'danger'));
+					
+			}
+		} catch (Exception $e) {
+			echo json_encode(array('title' => 'Error: ', 'text' => $e->message, 'status' => 'danger'));
+		}
+	
+			
+	
+	
+	}
 }

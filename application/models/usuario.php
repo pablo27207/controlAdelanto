@@ -29,8 +29,7 @@ class Usuario extends DataMapper {
 					'rules' => array('required')
 			),
 		'apellido'=> array(
-					'label'	=> 'Apellido',
-					'rules' => array('numeric')
+					'label'	=> 'Apellido'
 			),
 		'fechaIngreso'=> array(
 					'label'	=> 'fecha de ingreso',
@@ -42,11 +41,10 @@ class Usuario extends DataMapper {
 			),
 			'telefono'=> array(
 					'label'	=> 'Tel&eacute;fono',
-					'rules' => array('trim','valid_date')
+					'rules' => array('trim')
 			),
 			'categoria'=> array(
-					'label'	=> 'Categoria',
-					'rules' => array('trim','valid_date')
+					'label'	=> 'Categoria'
 			),
 			'email'=> array(
 					'label'	=> 'Email',
