@@ -420,4 +420,3 @@
       </section>
 
       <!--main content end-->
-      <?php include 'includes/footer.php'; ?>

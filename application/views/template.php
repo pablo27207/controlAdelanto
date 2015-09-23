@@ -5,6 +5,7 @@
 	$DEFAULT_TITLE = 'Laffeuillade';
 	$DEFAULT_META  = '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
     $isHead        = true; 
+    $isFoot        = true;
 
 	/*
 	 * $head_data['title']:	Is the title of the Browser caption
@@ -20,6 +21,7 @@
     
     $view_data['data']	= (isset($data_view))? $data_view : null;
     
+    $footer_data['showFoot'] = (isset($showFoot)? $showFoot : $isFoot);
 	$footer_data['js'] = (isset($js))? $js : null;
     $footer_data['library'] = (isset($library))? $library : null;
 

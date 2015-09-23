@@ -18,14 +18,14 @@ class Welcome extends CI_Controller {
                 $data['css']        = array('zabuto_calendar');
                 $data['js']         = array('inicio','sparkline-chart','zabuto_calendar');
                 $data['library']       = '';
-                $data['showHead']   = false;
+                $data['showFoot']   = true;
             }
             else{
               $data['view']       = 'welcome_message';
                 $data['css']        = array('zabuto_calendar');
                 $data['js']         = array('inicio','sparkline-chart','zabuto_calendar');
                 $data['library']       = '';
-                $data['showHead']   = false;
+                $data['showFoot']   = true;
             	$data['data_view']		=$data;
             }
             $this->load->view('template',$data);

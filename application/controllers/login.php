@@ -19,6 +19,7 @@ class Login extends CI_Controller {
                 $data['js']         = array('jquery.backstretch.min', 'login');
            
                 $data['showHead']   = false;
+                $data['showFoot']   = false;
             }
             else{
               $data['view']       = 'loginView';

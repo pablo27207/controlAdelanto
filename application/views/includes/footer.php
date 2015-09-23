@@ -1,4 +1,5 @@
       <!--footer start-->
+     <?php if ($showFoot) { ?>
       <footer class="site-footer">
           <div class="text-center">
               2015 - UNPSJB
@@ -8,6 +9,7 @@
           </div>
       </footer>
       <!--footer end-->
+          <?php } ?>
   </section>
 
     <!-- js placed at the end of the document so the pages load faster -->
