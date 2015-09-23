@@ -18,13 +18,7 @@
                                     <th class="hidden-phone">Nombre</th>
                                     <th class="hidden-phone">Apellido</th>
                                     <th class="hidden-phone">Tel&eacute;fono</th>
-                                     <th class="hidden-phone">Email</th>
-                                     <th class="center-colum-text">
-		                              
-		                                    <i class="fa fa-edit fa-fw"></i>
-		                                </a>
-		                            </th>
-                                    
+                                     <th class="hidden-phone">Email</th>                      
                                 </tr>
                                 </thead>
                                 <tbody>

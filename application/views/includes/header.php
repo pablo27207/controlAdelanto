@@ -47,7 +47,12 @@
             </div>
             <div class="top-menu">
             	<ul class="nav pull-right top-menu">
+                    <?php if ($this->session->userdata('logged_in')) { ?>
+                      <li><a class="logout" href="<?php echo base_url()?>login/salir">Logout</a></li>
+                  <?php  } else { ?>
                     <li><a class="logout" href="<?php echo base_url()?>login">Login</a></li>
+               <?php  }?>
+                    
             	</ul>
             </div>
         </header>
@@ -63,7 +68,7 @@
               <ul class="sidebar-menu" id="nav-accordion">
               
               	  <p class="centered"><a href="profile.html"><img src="assets/img/ui-sam.jpg" class="img-circle" width="80"></a></p>
-              	  <h5 class="centered">Juan Pablo Laffeuillade</h5>
+              	  <h5 class="centered"><?php echo $this->session->userdata('nombre') ?></h5>
               	  	
                   <li class="mt">
                       <a class="" href="<?php echo base_url();?>welcome">

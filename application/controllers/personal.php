@@ -9,7 +9,7 @@ class Personal extends CI_Controller{
 	}
 	
 	public function index(){
-        if ($this->session->userdata('logged_in')) {
+        if (!$this->session->userdata('logged_in')) {
             redirect('welcome', 'refresh');
         }else {
             if (!isset($data)) {
@@ -19,7 +19,7 @@ class Personal extends CI_Controller{
                 $data['js']         = array('personal','/advanced-datatable/media/dataTables.bootstrap.min','advanced-datatable/media/js/jquery.dataTables');
                 $data['library']       = '';
                 
-                $data['showHead']   = false;
+                $data['showHead']   = true;
             }
             else{
               	$data['view']       = 'personalView';
@@ -27,7 +27,7 @@ class Personal extends CI_Controller{
                 $data['css']        = array('advanced_datatable/css/demo_page','advanced_datatable/css/demo_table','advanced_datatable/css/DT_bootstrap');
                 $data['js']         = array('personal','advanced-datatable/media/dataTables.bootstrap.min','advanced-datatable/media/js/jquery.dataTables');
                 $data['library']       = '';
-                $data['showHead']   = false;
+                $data['showHead']   = true;
             	$data['data_view']	=$data;
             }
             $this->load->view('template',$data);
@@ -73,20 +73,20 @@ class Personal extends CI_Controller{
 			$u->contrasenia = $this->input->post('contraseniaAltaUsuario');
 			$u->confirmarContrasenia = $this->input->post('confirmarContraseniaAltaUsuario');
 			//CAMBIAR CONTRASEÑA
-		/*	$u->rol_id =  '1';
-			$u->nombre = 'Pablo';
-			$u->apellido= 'Rosales';
-			$u->dni =  '36321654';
-			$u->legajo =  '1504';
+		/*	$u->rol_id =  '2';
+			$u->nombre = 'Mauro';
+			$u->apellido= 'Almiron';
+			$u->dni =  '35384630';
+			$u->legajo =  '2317';
 			
-			$u->fechaIngreso = '2015/04/27';
+			$u->fechaIngreso = '2015/09/09';
 			$u->fechaEgreso = '';//dejar en null.
-			$u->telefono = '297063245';
+			$u->telefono = '2974131695';
 			$u->categoria = '2';
 			$u->estado =  'alta';
-			$u->email ='pablo27207@gmail.com';
+			$u->email ='mdavid.almiron@gmail.com';
 			$u->contrasenia = 'laboratorioa';
-			$u->confirmarContrasenia = 'laboratorioa';*/
+			$u->confirmarContrasenia = 'laboratorioa'; */
 	
 			$url = "C:\wamp\www\controlAdelanto";
 	

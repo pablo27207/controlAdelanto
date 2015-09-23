@@ -1,12 +1,11 @@
  <div id="login-page">
 	  	<div class="container">
-	  	
 		      <form class="form-login" action="<?php echo base_url()?>login/acceder" method="POST">
 		        <h2 class="form-login-heading">Ingresar</h2>
 		        <div class="login-wrap">
-		            <input type="text" class="form-control" placeholder="email" autofocus>
+		            <input id="username" name="username" type="text" class="form-control" placeholder="email" autofocus>
 		            <br>
-		            <input type="password" class="form-control" placeholder="Contrase&ntilde;a">
+		            <input id="password" name="password" type="password" class="form-control" placeholder="Contrase&ntilde;a">
 		            
 		               
 		                <span class="pull-right">
