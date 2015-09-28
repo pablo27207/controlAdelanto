@@ -15,6 +15,36 @@ class Personal extends CI_Controller{
             if (!isset($data)) {
                 $data['view']       = 'personalView';
                 $data['data_view']  = array('data_usuarios'=> $this->buscarPersonal());
+                $data['css']        = array('advanced_datatable/css/demo_page','advanced_datatable/css/demo_table','advanced_datatable/css/DT_bootstrap','bootstrap-datepicker/datepicker',
+                							'bootstrap-daterangepicker/daterangepicker');
+                $data['js']         = array('personal','/advanced-datatable/media/dataTables.bootstrap.min','advanced-datatable/media/js/jquery.dataTables',
+                							'bootstrap-datepicker/bootstrap-datepicker','bootstrap-daterangepicker/date','bootstrap-daterangepicker/daterangepicker','bootstrap-daterangepicker/moment.min');
+                $data['library']       = '';
+                
+                $data['showHead']   = true;
+            }
+            else{
+              	$data['view']       = 'personalView';
+                $data['data_view']  = array('data_usuarios'=> $this->buscarPersonal());
+                $data['css']        = array('advanced_datatable/css/demo_page','advanced_datatable/css/demo_table','advanced_datatable/css/DT_bootstrap','bootstrap-datepicker/datepicker',
+                							'bootstrap-daterangepicker/daterangepicker');
+                $data['js']         = array('personal','/advanced-datatable/media/dataTables.bootstrap.min','advanced-datatable/media/js/jquery.dataTables',
+                							'bootstrap-datepicker/bootstrap-datepicker','bootstrap-daterangepicker/date','bootstrap-daterangepicker/daterangepicker','bootstrap-daterangepicker/moment.min');
+                $data['library']       = '';
+                $data['showHead']   = true;
+            	$data['data_view']	=$data;
+            }
+            $this->load->view('template',$data);
+        }
+	}
+
+	public function vistaAltaUsuario(){
+        if (!$this->session->userdata('logged_in')) {
+            redirect('welcome', 'refresh');
+        }else {
+            if (!isset($data)) {
+                $data['view']       = 'nuevoEmpleadoView';
+                $data['data_view']  = array('data_usuarios'=> $this->buscarPersonal());
                 $data['css']        = array('advanced_datatable/css/demo_page','advanced_datatable/css/demo_table','advanced_datatable/css/DT_bootstrap');
                 $data['js']         = array('personal','/advanced-datatable/media/dataTables.bootstrap.min','advanced-datatable/media/js/jquery.dataTables');
                 $data['library']       = '';
@@ -22,7 +52,7 @@ class Personal extends CI_Controller{
                 $data['showHead']   = true;
             }
             else{
-              	$data['view']       = 'personalView';
+              	$data['view']       = 'nuevoEmpleadoView';
                 $data['data_view']  = array('data_usuarios'=> $this->buscarPersonal());
                 $data['css']        = array('advanced_datatable/css/demo_page','advanced_datatable/css/demo_table','advanced_datatable/css/DT_bootstrap');
                 $data['js']         = array('personal','advanced-datatable/media/dataTables.bootstrap.min','advanced-datatable/media/js/jquery.dataTables');
@@ -33,6 +63,7 @@ class Personal extends CI_Controller{
             $this->load->view('template',$data);
         }
 	}
+
 	public function buscarPersonal($valorBusqueda = null){
 	
 		$u = new Usuario();
@@ -71,22 +102,22 @@ class Personal extends CI_Controller{
 			$u->estado =  'alta';
 			$u->email =  $this->input->post('emailAltaUsuario');
 			$u->contrasenia = $this->input->post('contraseniaAltaUsuario');
-			$u->confirmarContrasenia = $this->input->post('confirmarContraseniaAltaUsuario');
+			$u->confirmarContrasenia = $this->input->post('confirmarContraseniaAltaUsuario'); 
 			//CAMBIAR CONTRASEÑA
 		/*	$u->rol_id =  '2';
-			$u->nombre = 'Mauro';
-			$u->apellido= 'Almiron';
-			$u->dni =  '35384630';
-			$u->legajo =  '2317';
+			$u->nombre = 'Florencia';
+			$u->apellido= 'Espinoza';
+			$u->dni =  '37150124';
+			$u->legajo =  '1606';
 			
 			$u->fechaIngreso = '2015/09/09';
 			$u->fechaEgreso = '';//dejar en null.
-			$u->telefono = '2974131695';
-			$u->categoria = '2';
+			$u->telefono = '2974150150';
+			$u->categoria = '1';
 			$u->estado =  'alta';
-			$u->email ='mdavid.almiron@gmail.com';
-			$u->contrasenia = 'laboratorioa';
-			$u->confirmarContrasenia = 'laboratorioa'; */
+			$u->email ='florencia@gmail.com';
+			$u->contrasenia = 'asd';
+			$u->confirmarContrasenia = 'asd'; */
 	
 			$url = "C:\wamp\www\controlAdelanto";
 	

@@ -6,7 +6,7 @@
           <section class="wrapper">
           	<h3><i class="fa fa-angle-right"></i> Empleados</h3>
 				<div class="row mb">
-				
+        
 				   <!-- page start-->
                   <div class="content-panel">
                         <div class="adv-table">
@@ -22,8 +22,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                <?php foreach ($data['data_usuarios'] as $row){
-                    	?>
+                                <?php foreach ($data['data_usuarios'] as $row){ ?>
                     	  <?php if (isset($row-> estado) && (strcmp($row ->estado,'baja')==0)){
                     	   echo('<tr class="danger">');}
                         else{
@@ -51,7 +50,7 @@
 				
               </div><!-- /row -->
 
-		</section><! --/wrapper -->
+		</section> <!--/wrapper -->
       </section><!-- /MAIN CONTENT -->
 
       <!--main content end-->
