@@ -3,7 +3,7 @@
       *********************************************************************************************************************************************************** -->
       <!--main content start-->
       <section id="main-content">
-          <section class="wrapper">
+          <section class="wrapper" id="paginaPersonal">
           	<h3><i class="fa fa-angle-right"></i> Empleados</h3>
 				<div class="row mb">
         
