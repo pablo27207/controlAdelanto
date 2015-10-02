@@ -1,6 +1,6 @@
       <!--footer start-->
      <?php if ($showFoot) { ?>
-      <footer class="site-footer">
+    <!--  <footer class="site-footer">
           <div class="text-center">
               2015 - UNPSJB
               <a href="index.html#" class="go-top">
@@ -8,7 +8,7 @@
               </a>
           </div>
       </footer>
-      <!--footer end-->
+      footer end-->
           <?php } ?>
   </section>
 

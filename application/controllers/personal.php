@@ -17,7 +17,7 @@ class Personal extends CI_Controller{
                 $data['data_view']  = array('data_usuarios'=> $this->buscarPersonal());
                 $data['css']        = array('advanced_datatable/css/demo_page','advanced_datatable/css/demo_table','advanced_datatable/css/DT_bootstrap','bootstrap-datepicker/datepicker',
                 							'bootstrap-daterangepicker/daterangepicker', 'personal');
-                $data['js']         = array('personal','/advanced-datatable/media/dataTables.bootstrap.min','advanced-datatable/media/js/jquery.dataTables',
+                $data['js']         = array('paginadorDataTable','/advanced-datatable/media/dataTables.bootstrap.min','advanced-datatable/media/js/jquery.dataTables',
                 							'bootstrap-datepicker/bootstrap-datepicker','bootstrap-daterangepicker/date','bootstrap-daterangepicker/daterangepicker','bootstrap-daterangepicker/moment.min');
                 $data['library']       = '';
                 
@@ -28,7 +28,7 @@ class Personal extends CI_Controller{
                 $data['data_view']  = array('data_usuarios'=> $this->buscarPersonal());
                 $data['css']        = array('advanced_datatable/css/demo_page','advanced_datatable/css/demo_table','advanced_datatable/css/DT_bootstrap','bootstrap-datepicker/datepicker',
                 							'bootstrap-daterangepicker/daterangepicker','personal');
-                $data['js']         = array('personal','/advanced-datatable/media/dataTables.bootstrap.min','advanced-datatable/media/js/jquery.dataTables',
+                $data['js']         = array('paginadorDataTable','/advanced-datatable/media/dataTables.bootstrap.min','advanced-datatable/media/js/jquery.dataTables',
                 							'bootstrap-datepicker/bootstrap-datepicker','bootstrap-daterangepicker/date','bootstrap-daterangepicker/daterangepicker','bootstrap-daterangepicker/moment.min');
                 $data['library']       = '';
                 $data['showHead']   = true;

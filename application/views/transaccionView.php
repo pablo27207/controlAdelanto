@@ -4,7 +4,13 @@
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper" id="paginaTransaccion">
-          	<h3><i class="fa fa-angle-right"></i> Transacciones</h3>
+          	<h3><i class="fa fa-angle-right"></i> Transacciones
+          	
+          	<a href="<?php echo base_url(); ?>transacciones/vistaAltaTransaccion" class="btn btn-success btn-sm pull-right">
+                <i class="fa fa-plus"></i>
+                Nueva transacci&oacute;n
+            </a>
+            </h3>
 				<div class="row mb">
         
 				   <!-- page start-->
@@ -14,11 +20,13 @@
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Usuario</th>
+                                    <th>Caja</th>
+                                    <th>Operaci&oacute;n</th>
                                     <th class="hidden-phone">Nombre</th>
                                     <th class="hidden-phone">Apellido</th>
-                                    <th class="hidden-phone">Tel&eacute;fono</th>
-                                     <th class="hidden-phone">Email</th>                      
+                                    <th class="hidden-phone">Fecha</th>
+                                     <th class="hidden-phone">Email</th>   
+                                     <th class="hidden-phone">Detalle</th>                      
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -29,12 +37,13 @@
                             echo '<tr>';}
                        ?>
                     	
-                    		<td><?php echo $row -> dni; ?></td>
-                    		<td><?php echo $row -> legajo; ?></td>
-                            <td><?php echo $row -> nombre; ?></td>
-                            <td><?php echo $row -> apellido; ?></td>
-                            <td><?php echo $row -> telefono; ?></td>
-                             <td><?php echo $row -> email; ?></td>
+                    		<td><?php echo $row -> id; ?></td>
+                    		<td><?php echo $row -> tipo_caja_id; ?></td>
+                    		<td><?php echo $row -> tipoOperacion; ?></td>
+                            <td><?php echo $row -> usuario->get()->nombre; ?></td>
+                            <td><?php echo $row ->usuario->get()->apellido;?></td>
+                            <td><?php echo $row -> fecha; ?></td>
+                             <td><?php echo $row -> detalle; ?></td>
                              <a href=""><i class="fa fa-times fa-fw"></i></a>
                             
                               
