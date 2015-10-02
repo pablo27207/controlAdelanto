@@ -108,7 +108,7 @@ class Usuario extends DataMapper {
 		{
 			// Login failed, so set a custom error message
 			$this->error_message('login', 'Email o contrase&ntilde;a invalida');
-	
+		// como carajo funciona git? por que tan complicado?
 			return FALSE;
 		}
 		else
