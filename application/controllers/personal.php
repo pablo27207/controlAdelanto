@@ -65,22 +65,8 @@ class Personal extends CI_Controller{
 	}
 
 	public function buscarPersonal($valorBusqueda = null){
-	
 		$u = new Usuario();
-		if($valorBusqueda !=null){
-			$u->like('dni',$valorBusqueda);
-			$u->or_like('nombre',$valorBusqueda);
-			$u->or_like('apellido',$valorBusqueda);
-			$u->or_like('telefono',$valorBusqueda);
-			$u->or_like('email',$valorBusqueda)->get();
-
-		
-		}
-		else{
-			$u->get();
-		}
-		return $u;
-	
+		return $u->buscar($valorBusqueda);
 	}
 	
 	public function altaUsuario(){

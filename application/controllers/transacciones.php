@@ -27,7 +27,7 @@ class Transacciones extends CI_Controller{
                 $data['js']         = array('paginadorDataTable','/advanced-datatable/media/dataTables.bootstrap.min','advanced-datatable/media/js/jquery.dataTables');
                 $data['library']       = '';
                 $data['showHead']   = true;
-            	$data['data_view']		=$data;
+            	$data['data_view']	= $data;
             }
             $this->load->view('template',$data);
         }
@@ -40,7 +40,7 @@ class Transacciones extends CI_Controller{
 		$data['data_view']  = array('data_personal'=> $u->buscar());
 		$data['css']        = array('altaTransaccion','wizzard/prettify','transaccion','advanced_datatable/css/demo_page','advanced_datatable/css/demo_table','advanced_datatable/css/DT_bootstrap');
 		$data['js']         = array('wizzard/jquery.bootstrap.wizard.min','wizzard/prettify','paginadorDataTable','/advanced-datatable/media/dataTables.bootstrap.min','advanced-datatable/media/js/jquery.dataTables','altaTransaccion');
-		$data['library']       = '';
+		$data['library']    = '';
 		$data['showHead']   = true;
 		$this->load->view('template',$data);
 	}

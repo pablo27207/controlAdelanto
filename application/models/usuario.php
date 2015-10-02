@@ -108,7 +108,7 @@ class Usuario extends DataMapper {
 		{
 			// Login failed, so set a custom error message
 			$this->error_message('login', 'Email o contrase&ntilde;a invalida');
-	
+		// como carajo funciona git? por que tan complicado?
 			return FALSE;
 		}
 		else
@@ -125,22 +125,17 @@ class Usuario extends DataMapper {
 	}
 	
 	public function buscar($valorBusqueda = null){
-	
-		
 		if($valorBusqueda !=null){
 			$this->like('dni',$valorBusqueda);
 			$this->or_like('nombre',$valorBusqueda);
 			$this->or_like('apellido',$valorBusqueda);
 			$this->or_like('telefono',$valorBusqueda);
 			$this->or_like('email',$valorBusqueda)->get();
-
-		
 		}
 		else{
 			$this->get();
 		}
 		return $this;
-	
 	}
 	
 }
