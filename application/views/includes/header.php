@@ -80,10 +80,7 @@
                       <a href="<?php echo base_url();?>personal" >
                           <i class="fa fa-users"></i>
                           <span>Empleados</span>
-                      </a>
-                  <ul class="sub">
-                    <li><a href="<?php echo base_url()?>personal/vistaAltaUsuario">Nuevo empleado</a></li>
-                  </ul>    
+                      </a>   
                   </li>
 
                   <li class="sub-menu">
