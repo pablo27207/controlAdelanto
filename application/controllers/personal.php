@@ -74,7 +74,7 @@ class Personal extends CI_Controller{
 			$u->or_like('telefono',$valorBusqueda);
 			$u->or_like('email',$valorBusqueda)->get();
 
-		
+		//esto es  un cambio
 		}
 		else{
 			$u->get();
