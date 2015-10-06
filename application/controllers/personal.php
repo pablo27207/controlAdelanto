@@ -45,8 +45,11 @@ class Personal extends CI_Controller{
             if (!isset($data)) {
                 $data['view']       = 'nuevoEmpleadoView';
                 $data['data_view']  = array('data_usuarios'=> $this->buscarPersonal());
-                $data['css']        = array('advanced_datatable/css/demo_page','advanced_datatable/css/demo_table','advanced_datatable/css/DT_bootstrap');
-                $data['js']         = array('personal','/advanced-datatable/media/dataTables.bootstrap.min','advanced-datatable/media/js/jquery.dataTables');
+                $data['css']        = array('advanced_datatable/css/demo_page','advanced_datatable/css/demo_table',
+                							'advanced_datatable/css/DT_bootstrap','custom');
+                $data['js']         = array('personal','/advanced-datatable/media/dataTables.bootstrap.min','advanced-datatable/media/js/jquery.dataTables',
+                							'bootstrap-timepicker/bootstrap-timepicker','bootstrap-datetimerpicker/bootstrap-datetimepicker',
+                							'bootstrap-daterangepicker/daterangepicker');
                 $data['library']       = '';
                 
                 $data['showHead']   = true;
@@ -54,8 +57,11 @@ class Personal extends CI_Controller{
             else{
               	$data['view']       = 'nuevoEmpleadoView';
                 $data['data_view']  = array('data_usuarios'=> $this->buscarPersonal());
-                $data['css']        = array('advanced_datatable/css/demo_page','advanced_datatable/css/demo_table','advanced_datatable/css/DT_bootstrap');
-                $data['js']         = array('personal','advanced-datatable/media/dataTables.bootstrap.min','advanced-datatable/media/js/jquery.dataTables');
+                $data['css']        = array('advanced_datatable/css/demo_page','advanced_datatable/css/demo_table',
+                							'advanced_datatable/css/DT_bootstrap','custom');
+                $data['js']         = array('personal','advanced-datatable/media/dataTables.bootstrap.min','advanced-datatable/media/js/jquery.dataTables',
+                							'bootstrap-timepicker/bootstrap-timepicker','bootstrap-datetimerpicker/bootstrap-datetimepicker',
+                							'bootstrap-daterangepicker/daterangepicker');
                 $data['library']       = '';
                 $data['showHead']   = true;
             	$data['data_view']	=$data;

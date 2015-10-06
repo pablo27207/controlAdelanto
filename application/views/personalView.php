@@ -4,7 +4,9 @@
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper" id="paginaPersonal">
-          	<h3><i class="fa fa-angle-right"></i> Empleados</h3>
+          	<h3><i class="fa fa-angle-right"></i> Empleados
+            <a class="btn btn-success btn-sm pull-right" href="<?php echo base_url();?>personal/vistaAltaUsuario">Nuevo usuario</a>
+            </h3>
 				<div class="row mb">
         
 				   <!-- page start-->
