@@ -36,9 +36,10 @@ class Transacciones extends CI_Controller{
 	public function vistaAltaTransaccion(){
 		
 		$u = new Usuario();
+		$t = new Tipo_caja();
 		$data['view']       = 'AltaTransaccionView';
-		$data['data_view']  = array('data_personal'=> $u->buscar());
-		$data['css']        = array('altaTransaccion','wizzard/prettify','transaccion','advanced_datatable/css/demo_page','advanced_datatable/css/demo_table','advanced_datatable/css/DT_bootstrap');
+		$data['data_view']  = array('data_personal'=> $u->buscar(), 'data_tipo_caja'=> $t->buscar());
+		$data['css']        = array(/*'altaTransaccion',*/'wizzard/prettify','transaccion','advanced_datatable/css/demo_page','advanced_datatable/css/demo_table','advanced_datatable/css/DT_bootstrap');
 		$data['js']         = array('wizzard/jquery.bootstrap.wizard.min','wizzard/prettify','paginadorDataTable','/advanced-datatable/media/dataTables.bootstrap.min','advanced-datatable/media/js/jquery.dataTables','altaTransaccion');
 		$data['library']    = '';
 		$data['showHead']   = true;

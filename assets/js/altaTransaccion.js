@@ -1,7 +1,16 @@
 	$(document).ready(function() {
 	  	$('#rootwizard').bootstrapWizard({onNext: function(tab, navigation, index) {
+	  		
+	  		if (index ==1){
+	  			var checkedValues = $('input:checkbox:checked').map(function() {
+				    return this.value;
+				}).get();
+				
+				console.log(checkedValues);
+	  		}
 				if(index==2) {
 					// Make sure we entered the name
+				
 					if(!$('#monto').val()) {
 						alert('Debe ingresar un monto');
 						$('#monto').focus();

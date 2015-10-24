@@ -2,15 +2,26 @@
       MAIN CONTENT
       *********************************************************************************************************************************************************** -->
       <!--main content start-->
-      <section id="main-content">
-          <section class="wrapper" id="paginaTransaccion">
-          	<h3><i class="fa fa-angle-right"></i> Transacciones
-          	
-          	<a href="<?php echo base_url(); ?>transacciones/vistaAltaTransaccion" class="btn btn-success btn-sm pull-right">
+     <section id="main-content">
+          <section class="wrapper">
+
+              <div class="row">
+                  <div class="main-chart ">
+                  
+                      <!--CUSTOM CHART START -->
+                      <div class="border-head">
+                          <h3>Transacciones
+                          
+                                     	<a href="<?php echo base_url(); ?>transacciones/vistaAltaTransaccion" class="btn btn-success btn-newObject btn-sm pull-right">
                 <i class="fa fa-plus"></i>
                 Nueva transacci&oacute;n
             </a>
-            </h3>
+                          </h3>
+               
+                      </div>
+    
+          	
+          
 				<div class="row mb">
         
 				   <!-- page start-->
@@ -57,6 +68,8 @@
               <!-- page end-->
 
 				
+              </div><!-- /row -->
+              </div><!-- /row -->
               </div><!-- /row -->
 
 		</section> <!--/wrapper -->
