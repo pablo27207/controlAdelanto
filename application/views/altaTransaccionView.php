@@ -43,7 +43,7 @@
 	                            <td><?php echo $row -> telefono; ?></td>
 	                             <td><?php echo $row -> email; ?></td>
 	                            <td class="center-colum-text">
-                                 <input type="checkbox">
+                                 <input value= "<?php echo $row -> id; ?>" type="checkbox">
                             </td>
 	                            
 	                              
@@ -69,28 +69,32 @@
 							<br>
 							<h3>Tipo de caja</h3>
 						    <div class="btn-group" data-toggle="buttons">
+							  
+							   <?php foreach ($data['data_tipo_caja'] as $row){ ?>
 							  <label class="btn btn-primary active">
-							    <input type="radio" autocomplete="off" checked> caja 1
+							  <input type="radio" autocomplete="off" > <?php echo $row -> nombre; ?>
 							  </label>
-							  <label class="btn btn-primary">
-							    <input type="radio" autocomplete="off"> caja 2
-							  </label>
-							  <label class="btn btn-primary">
-							    <input type="radio" autocomplete="off"> caja 3
-							  </label>
-							  <label class="btn btn-primary">
-							    <input type="radio" autocomplete="off"> caja 4
-							  </label>
-							</div>
+							  	<?php 
+	                    }?>
+						</div>
 							
-							<br>
-							<h3>Monto</h3>
-								<div class="input-group" style="margin-right: 50%;">
+							<div id="empleadosSeleccionados" class="row">
+							
+							<div class="col-md-6">
+							pepe lui
+							</div>
+							<div class="col-md-6">
+									<h3>Monto</h3>
+								<div class="input-group" >
 								  <span class="input-group-addon">$</span>
 								  <input type="text" class="form-control" name='monto' id='monto' aria-label="monto">
 								 
 								</div>
-					       
+					       	
+							</div>
+							
+						
+							 </div>
 					    </div>
 						<div class="tab-pane" id="tab3">
 						

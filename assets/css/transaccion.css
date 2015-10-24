@@ -1,4 +1,14 @@
 #paginaTransaccion{
-	padding-left: 5%;
-	padding-right: 5%;
+	/*padding-left: 5%;
+	padding-right: 5%;*/
+	
+}
+.main-chart {
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.btnNewObject {
+	margin-top: -15px;
 }
