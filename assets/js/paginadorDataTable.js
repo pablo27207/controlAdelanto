@@ -1,4 +1,6 @@
   /* Formating function for row details */
+
+
       function fnFormatDetails ( oTable, nTr )
       {
           var aData = oTable.fnGetData( nTr );
