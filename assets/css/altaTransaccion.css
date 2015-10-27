@@ -1,6 +1,9 @@
 
-    .pagina{
-	    PADDING-top: 7%;
-    PADDING-LEFT: 15%;
-    PADDING-RIGHT: 5%;
+.main-chart {
+	padding-top: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.mb {
+	margin-bottom: 25px;
 }
